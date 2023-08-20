@@ -1,13 +1,200 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  text-align: center;
+  width: 100%;  
+  letter-spacing: 0.5rem;
+  background-color: blue;
+  height: fit-content;
+  color: white;
+  padding: 1rem;  
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.aside {
+  flex-grow: 1; 
+  padding-top: 2rem;
+  padding-left: 3rem;
+  line-height: 3;
+}
+
+.menu--item {
+  font-weight: 700;
+}
+
+.menu--item .active {
+  color: red;
+}
+
+.slider {
+  flex-grow: 2.5; 
+}
+
+.theshow {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-items: space-between; 
+  align-items: center;   
+  padding-top: 2rem;
+  padding-left: 7rem;
+}
+
+.image {  
+  width: 45rem;
+  height: 27rem;
+  object-fit: cover;
+  border-radius: 5px;  
+}
+
+.slide { 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateX(0); 
+  /* text-transform: uppercase;   */
+}
+
+.slide > h2 {
+  text-align: center;
+}
+
+.slide.active {   
+  animation-name: slidePic;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+}
+
+.right-arrow { 
+  font-size: 3rem;
+  color: #000;  
+  cursor: pointer;
+  user-select: none;
+}
+
+.left-arrow { 
+  font-size: 3rem;
+  color: #000;
+  cursor: pointer;
+  user-select: none;
+}
+
+.slider-buttons {
+  text-align: center;
+}
+
+.slider-buttons button {
+  padding: 2.5px;
+  cursor: pointer;  
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.run-button {
+  border: green solid 2px;
+  color: green;
+  margin-right: 2rem;
+}
+
+.stop-button {
+  border: red solid 2px;
+  color: red; 
+}
+
+.run-button.disabled {
+  border: rgb(129, 126, 126) solid 2px;
+  color: rgb(129, 126, 126); 
+  margin-right: 2rem;
+  cursor: default;
+}
+
+.stop-button.disabled {
+  border: rgb(129, 126, 126) solid 2px;
+  color: rgb(129, 126, 126); 
+  cursor: default;
+}
+
+@keyframes slidePic {
+  from {
+    transform: translateX(45rem);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 1150px) {
+  .image {   
+    width: 36rem;
+    height: 22rem;   
+  }
+  .theshow {    
+    padding-left: 2rem;
+  }
+}
+
+@media (max-width: 992px) {
+ .container {
+  flex-direction: column;
+  align-items: center;
+ }
+ .image {
+  width: 40rem;
+  height: 24rem;
+ }
+ .theshow {    
+  padding-left: 0;
+}
+}
+
+@media (max-width: 800px) {
+  .image {
+    width: 36rem;
+    height: 21rem;
+   }
+}
+
+@media (max-width: 700px) {
+  .image {
+    width: 30rem;
+    height: 18rem;
+   }
+}
+
+@media (max-width: 600px) {
+  .image {
+    width: 24rem;
+    height: 14rem;
+   }
+}
+
+@media (max-width: 500px) {
+  .image {
+    width: 18rem;
+    height: 11rem;
+   }
+}
+
+@media (max-width: 400px) {
+  .image {
+    width: 15rem;
+    height: 9rem;
+   }
 }

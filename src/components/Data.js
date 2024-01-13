@@ -28,7 +28,7 @@ export const LagosData = [
 
     },
     {
-        image: 'https://viajerosustentable.com/wp-content/gallery/LAGO%20COATEPEQUE/09.%20Eli%20en%20el%20muelle.jpg',
+        image: 'https://guanacos.com/wp-content/uploads/2023/02/GUANACOS-LAGO-DE-COATEPEQUE.jpg',
         title: 'Lago de Coatepeque'
     },
     {
@@ -59,7 +59,7 @@ export const PlayasData = [
         title: 'Playa El Cuco'
     },
     {
-        image: 'https://cdn-pro.elsalvador.com/wp-content/uploads/2017/01/27014105/1434884549128.jpg',
+        image: 'https://cdn-pro.elsalvador.com/wp-content/uploads/2021/04/PLayas-turismo-covid-19-afluencia-vacaciones-semana-santa-243.jpg',
         title: 'Playa El Majahual'
     },
     {
